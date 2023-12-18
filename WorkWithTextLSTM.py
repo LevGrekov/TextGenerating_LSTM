@@ -45,7 +45,6 @@ model.add(Embedding(dl.total_words, 50, input_length=dl.max_sequence_length - 1)
 model.add(LSTM(256, return_sequences=True))
 model.add(Dropout(0.2))
 model.add(LSTM(256))
-model.add(Dropout(0.2))
 model.add(Dense(128, activation='relu'))
 model.add(Dense(dl.total_words, activation='softmax'))
 
